@@ -40,6 +40,39 @@
 				}
 				 
 			})
+			.state('signin', {
+				url: '/signin',
+				views: {
+					header: includeObject.header,
+					content: {
+						templateUrl: templateUrl + 'signin-partial.html',
+						controller: 'SigninController',
+					},
+					footer: includeObject.footer,
+				}
+			})
+			.state('cart-checkout', {
+				url: '/cart-checkout',
+				views: {
+					header: includeObject.header,
+					content: {
+						templateUrl: templateUrl + 'cart-checkout-partial.html',
+						controller: 'CartCheckoutController',
+					},
+					footer: includeObject.footer,
+				}
+			})
+			.state('products', {
+				url: '/products',
+				views: {
+					header: includeObject.header,
+					content: {
+						templateUrl: templateUrl + 'products-partial.html',
+						controller: 'ProductsController',
+					},
+					footer: includeObject.footer,
+				}
+			});
 	});
 	
 

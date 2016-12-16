@@ -44,6 +44,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="app/controllers/header-controller.js"></script>
 	<script src="app/controllers/footer-controller.js"></script>
 	<script src="app/controllers/content-controller.js"></script>
+	<script src="app/controllers/signin-controller.js"></script>
+	<script src="app/controllers/cart-checkout-controller.js"></script>
 
 	<!-- script-for-portfolio -->
 		  <script type="text/javascript">
@@ -96,12 +98,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 		// Run the show!
 		filterList.init();
-		
-		
 	});	
 	</script>
-	
-
+	<script type="text/javascript" src="/lib/hover_pack.js"></script>
+		  <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+<!-- search-scripts -->
+	<script src="js/classie.js"></script>
+	<script src="js/uisearch.js"></script>
+	<script> new UISearch( document.getElementById( 'sb-search' ) ); </script>
+<!-- //search-scripts -->
 
 	
 </body>
