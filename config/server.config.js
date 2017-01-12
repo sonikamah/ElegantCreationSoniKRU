@@ -13,7 +13,7 @@ var config = {
         },
         mongo: {
             'host': 'localhost',
-            'database': 'local_db',
+            'database': 'creations_db',
             'port': '27017'
         },
         app: {

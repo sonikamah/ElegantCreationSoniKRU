@@ -40,7 +40,7 @@
 						Email:
 						<span class="require">*</span>
 						</label>
-						<input type="text" value="">
+						<input type="text" value="" ng-model="signinData.username">
 					</div>
 					<div class="clearfix"></div>
 					<div class="cus_info_wrap">
@@ -48,14 +48,14 @@
 						Password:
 						<span class="require">*</span>
 						</label>
-						<input type="password" value="">
+						<input type="password" value="" ng-model="signinData.password">
 					</div>
 					<div class="clearfix"></div>
 					<div class="sky-form span_99">
 						<label class="checkbox"><input type="checkbox" name="checkbox" >Remember me on this computer </label>
 					</div>
 					<div class="botton1">
-						<input type="submit" value="SIGNIN" class="botton">
+						<input type="submit" value="SIGNIN" class="botton" ng-click="signin()">
 					</div>
 					<div class="forgetit">
 						<a href="">forgot your password?</a>
@@ -70,7 +70,7 @@
 						Email Id:
 						<span class="require">*</span>
 						</label>
-						<input type="text" value="">
+						<input type="text" value="" ng-model="loginFormData.username">
 					</div>
 					<div class="clearfix"></div>
 					<div class="cus_info_wrap">
@@ -78,12 +78,12 @@
 						Password:
 						<span class="require">*</span>
 						</label>
-						<input type="password" value="">
+						<input type="password" value="" ng-model="loginFormData.password">
 					</div>
 					<div class="clearfix"></div>
 					
 					<div class="botton1">
-						<input type="submit" value="SIGNIN" class="botton">
+						<input type="submit" value="SIGNUP" class="botton" ng-click="signup()">
 					</div>
 				</div>
 				<div class="col-md-2 benefits">

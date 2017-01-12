@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var appCreation = angular.module('appCreation',['ui.router']);
+	var appCreation = angular.module('appCreation',['ui.router' , 'ngStorage']);
 
 	console.log('**** Elegant Creation: app.js*****');
 

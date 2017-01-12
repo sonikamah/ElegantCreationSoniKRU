@@ -2,11 +2,14 @@
 angular.module('appCreation')
     .controller('CartCheckoutController', [
         '$scope',
+        '$localStorage',
         '$state',
         '$location',
         '$http','$rootScope', 
         function($scope, $localStorage, $state, $location, $http,$rootScope) {
             console.log("********** cart-checkout controller ***********");
+           
             $('.banner').remove();
-            //$(".banner").css("background", "");
+            $(".header").css("background-image", "none");
+            
     }]);

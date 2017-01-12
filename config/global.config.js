@@ -5,7 +5,7 @@ module.exports = {
         displayTitle: "Express-MVC",
         footerText: "2016 CodeByte. All rights reserved"
     },
-    modules: ['home'],
+    modules: ['home' , 'auth' , 'products'],
     CORS: {
         isEnabled: true,
         domains: ['*'],//user * to allow all origins or http://foo.com, http://bar.com

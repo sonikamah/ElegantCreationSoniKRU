@@ -52,6 +52,7 @@ var Bootstrap = function () {
             G.mime = require('mime');
             G.path = require('path');
             G.bcrypt = require('bcryptjs');
+            G.expressSession = require('express-session');
         },
         /**
          * register application events

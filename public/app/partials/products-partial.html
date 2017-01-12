@@ -1,11 +1,11 @@
 <div class="container">
-	   <div class="ft-ball">
+	<div class="ft-ball">
 		<div class="cont span_2_of_3">
-		  <div class="mens-toolbar">
-              <div class="sort">
-               	<div class="sort-by">
-		            <label>Sort By</label>
-		            <select>
+			<div class="mens-toolbar">
+				<div class="sort">
+					<div class="sort-by">
+						<label>Sort By</label>
+						<select>
                         <option value="">
                             Popularity </option>
                         <option value="">
@@ -13,13 +13,13 @@
                         <option value="">
                             Price : Low to High </option>
 		            </select>
-		            <a href=""><img src="/images/arrow2.gif" alt="" class="v-middle"></a>
-               </div>
-    		</div>
-	          <div class="pager">   
-	            <div class="limiter visible-desktop">
-	            <label>Show</label>
-	            <select>
+						<a href=""><img src="/images/arrow2.gif" alt="" class="v-middle"></a>
+					</div>
+				</div>
+				<div class="pager">
+					<div class="limiter visible-desktop">
+						<label>Show</label>
+						<select>
                     <option value="" selected="selected">
                         9 </option>
                     <option value="">
@@ -27,640 +27,52 @@
                     <option value="">
                         30 </option>
                 </select> per page
-	        </div>
-            <ul class="dc_pagination dc_paginationA dc_paginationA06">
-                <li><a href="#" class="previous">Pages</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-            </ul>
-            <div class="clearfix"></div>
-	    	</div>
-     	    <div class="clearfix"></div>
-	       </div>
-			    <div class="box1">
-				   <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-5.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-						<div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
+					</div>
+					<ul class="dc_pagination dc_paginationA dc_paginationA06">
+						<li><a href="#" class="previous">Pages</a></li>
+						<li><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="box1">
+				<div class="col_1_of_single1 span_1_of_single1" ng-repeat="product in products track by $index">
+					<div class="view1 view-fifth1">
+						<div class="top_box">
+							<h3 class="m_1">{{ product.info }}</h3>
+							<p class="m_2">Lorem ipsum</p>
+							<a ui-sref="single">
+								<div class="grid_img">
+									<div class="css3"><img src="{{ product.imagepath }}" alt="" /></div>
+									<div class="mask1">
+										<div class="info">Quick View</div>
+									</div>
+								</div>
+								<div class="price">$ {{ product.price }}
+									<button class="btn btn-success pull-right" ng-click="addToCart(product)">Add To Bag </button>
+								</div>
+								
+						</div>
+					</div>
+					</a>
+						 <!--<ul class="list2">
 						  <li>
 						  	<img src="/images/plus.png" alt=""/>
 						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
+							  <li>
+								  
 							  </li>
 							 </ul>
 						   </li>
-					     </ul>
+					     </ul>-->
 			    	    <div class="clear"></div>
 			    	</div>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-3.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clear"></div>
-			    	</div>
-				   <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-9.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
+					
 				  <div class="clearfix"></div>
 			  </div>
-			  <div class="box1">
-				 <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-10.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-4.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-						<div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clear"></div>
-			    	</div>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-11.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/tempate/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				  <div class="clearfix"></div>
-			  </div>
-			  <div class="box1">
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-6.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-7.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-8.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				  <div class="clearfix"></div>
-			  </div>
-			  <div class="box1">
-				   <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-2.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				    <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic-1.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				   <div class="col_1_of_single1 span_1_of_single1">
-				     <div class="view1 view-fifth1">
-				  	  <div class="top_box">
-					  	<h3 class="m_1">Lorem ipsum dolor sit amet</h3>
-					  	<p class="m_2">Lorem ipsum</p>
-						<a href="/template/single.html">
-				         <div class="grid_img">
-						   <div class="css3"><img src="/images/pic.jpg" alt=""/></div>
-					          <div class="mask1">
-	                       		<div class="info">Quick View</div>
-			                  </div>
-	                    </div>
-                       <div class="price">$ 510</div>
-					   </div>
-					    </div></a>
-					   <div class="rtng">
-					    <form action="" class="sky-form">
-						     <fieldset>					
-							   <section>
-							     <div class="rating">
-									<input type="radio" name="stars-rating" id="stars-rating-5">
-									<label for="stars-rating-5"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-4">
-									<label for="stars-rating-4"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-3">
-									<label for="stars-rating-3"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-2">
-									<label for="stars-rating-2"><i class="icon-star"></i></label>
-									<input type="radio" name="stars-rating" id="stars-rating-1">
-									<label for="stars-rating-1"><i class="icon-star"></i></label><span class="rtng">(5)<span>
-									<div class="clearfix"></div>
-								 </div>
-							  </section>
-						    </fieldset>
-						  </form>
-						  </div>
-						 <ul class="list2">
-						  <li>
-						  	<img src="/images/plus.png" alt=""/>
-						  	<ul class="icon1 sub-icon1 profile_img">
-							  <li><a class="active-icon c1" href="/template/single.html">Add To Bag </a>
-								<ul class="sub-icon1 list">
-									<li><h3>sed diam nonummy</h3><a href=""></a></li>
-									<li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-								</ul>
-							  </li>
-							 </ul>
-						   </li>
-					     </ul>
-			    	    <div class="clearfix"></div>
-			    	</div>
-				  <div class="clearfix"></div>
-			  </div>
+			  
 			  </div>
      	    <div class="rsidebar span_1_of_left">
 				   <section  class="sky-form">

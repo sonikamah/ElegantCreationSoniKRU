@@ -45,7 +45,7 @@ label{
 	-moz-background-size:cover;
 	-o-background-size:cover;
 	-ms-background-size:cover;
-	min-height:820px;
+	min-height: 100px;
 }
 .top-header{
 	padding:2em 0;
@@ -2951,7 +2951,7 @@ h3.c-head{
 		width: 20%;
 	}
 	.header {
-		min-height: 698px;
+		min-height: 100px;
 	}
 	.features-section-grid {
 		left: 274px;
