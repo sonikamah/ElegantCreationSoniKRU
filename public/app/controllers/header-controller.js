@@ -2,9 +2,14 @@
 angular.module('appCreation')
     .controller('HeaderController', [
         '$scope',
-        '$state',
-        '$location',
-        '$http','$rootScope', 
-function($scope, $localStorage, $state, $location, $http,$rootScope) {
-    console.log("********** content controller ***********");
+        '$localStorage',
+function($scope, $localStorage) {
+    console.log("********** header controller ***********");
+
+    // showing total count of selected cart.
+    if($localStorage.cart){
+        $scope.totalItemsCount = $localStorage.cart.length;
+    } else {
+        $scope.totalItemsCount = 0;
+    }
 }]);

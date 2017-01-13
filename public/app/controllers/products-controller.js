@@ -21,31 +21,24 @@ angular.module('appCreation')
             $scope.addToCart = function(product) {
 
                 var existingCart = $localStorage.cart ;
+                var storedItemID;
+
                 if(existingCart) {
                     for (var prod in existingCart) {
-                        if (existingCart[prod].imagepath === product.imagepath) {
-                            console.log("product already exist in cart ...");
-                            return ;
-                        } else {
-                            return existingCart.push(product);
+                        storedItemID = existingCart[prod].product.productId;
+                        if(storedItemID === product.productId) {
+                            existingCart[prod].qty ++;
+                            existingCart[prod].price = product.price * existingCart[prod].qty;
+                            return;
                         }
                     }
-                } else {
+                    // if the cart is not stored one , then add it to localStorage cart .
+                   $localStorage.cart.push({ product: product , qty: 0 , price: 0 });            
+                } else { 
+                    // first entry in the cart
                     $localStorage.cart = [];
-                    $localStorage.cart.push(product);
+                    $localStorage.cart.push({ product: product , qty: 0 , price: 0 });
                 }
-            
-
-                // if(!storedItem) { // not retieving stored item
-                //     storedItem = { item: product , qty: 0 , price: 0 };
-                // }
-                // storedItem.qty++;
-                // storedItem.price = storedItem.item.price * storedItem.qty;
-
-                // this.totalQty++;
-                // this.totalPrice +=  storedItem.price
-
-                // $localStorage.cart = storedItem;
             }
 
             

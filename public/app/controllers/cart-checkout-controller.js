@@ -3,13 +3,20 @@ angular.module('appCreation')
     .controller('CartCheckoutController', [
         '$scope',
         '$localStorage',
-        '$state',
-        '$location',
-        '$http','$rootScope', 
-        function($scope, $localStorage, $state, $location, $http,$rootScope) {
+        function($scope, $localStorage) {
             console.log("********** cart-checkout controller ***********");
            
             $('.banner').remove();
             $(".header").css("background-image", "none");
             
+            // showing total count of selected cart.
+            if($localStorage.cart){
+                $scope.totalItemsCount = $localStorage.cart.length;
+            } else {
+                $scope.totalItemsCount = 0;
+            }
+            
+            $scope.totalItems = $localStorage.cart;
+
+            // $scope.totalPrice = ;
     }]);
