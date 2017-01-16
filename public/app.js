@@ -51,6 +51,17 @@
 					footer: includeObject.footer,
 				}
 			})
+			.state('shopping-cart', {
+				url: '/shopping-cart',
+				views: {
+					header: includeObject.header,
+					content: {
+						templateUrl: templateUrl + 'shopping-cart-partial.html',
+						controller: 'ShoppingCartController',
+					},
+					footer: includeObject.footer,
+				}
+			})
 			.state('cart-checkout', {
 				url: '/cart-checkout',
 				views: {

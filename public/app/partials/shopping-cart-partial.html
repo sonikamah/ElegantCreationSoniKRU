@@ -1,0 +1,78 @@
+<div class="dreamcrub">
+    <ul class="breadcrumbs">
+        <li class="home">
+            <a href="/template/index.html" title="Go to Home Page"><img src="images/home.png" alt="" /></a>&nbsp;
+            <span>&gt;</span>
+        </li>
+        <li>
+            Cart()
+        </li>
+    </ul>
+    <ul class="previous">
+        <li><a href="/template/index.html">Back to Previous Page</a></li>
+    </ul>
+    <div class="clearfix"></div>
+</div>
+</div>
+<div class="container">
+    <div class="coats sing-c text-center" ng-if="! totalItemsCount">
+        <h3 class="c-head">Your Shopping Cart({{ totalItemsCount }})</h3>
+        <p>Your Bascket Is Empty Please Go <a href="/template/products.html">here</a> And Shop</p>
+    </div>
+
+    <div class="coats sing-c text-center" ng-if="totalItemsCount">
+        <h3 class="c-head">Your Shopping Cart({{ totalItemsCount }})</h3>
+        <div ng-repeat="item in totalItems track by $index">
+            <div class="row">
+                <div class="col-sm-6 col-sm-6  col-md-offset-3 col-sm-offset-3">
+                    <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="badge">{{ item.qty }}</span>
+                                <strong> {{ item.product.info }}</strong>
+                                <span class="label label-success"> ${{ item.price }} </span> 
+                                <div class="btn-group">
+                                    <div class="dropdown btn-group-xs">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Action<span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/reduce/{{ item._id }}">Reduce By 1</a></li>
+                                            <li><a href="/remove/{{ item._id }}">Remove All</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--<article class= "row">
+                <section class="cart-content">
+                    <div class="cart-img-container">
+                        <a href="{{item.imagePath}}"></a>
+                    </div>
+                    <div class="cart-right-main">
+                        <span class="badge">{{ item.qty }}</span>
+                        <strong> {{ item.product.info }}</strong>
+                        <span class="label label-success"> ${{ item.price }} </span> 
+                    </div>
+                </section>
+            </article>-->
+
+
+            <div class="row">
+                <div class="col-sm-6 col-sm-6  col-md-offset-3 col-sm-offset-3">
+                    <strong> Total: {{item.totalPrice}}</strong>
+                </div>
+            </div>
+            
+        </div>
+
+        <hr>
+            <div class="row">
+                <div class="col-sm-6 col-sm-6  col-md-offset-3 col-sm-offset-3">
+                    <a ui-sref="cart-checkout" type="button" class="btn btn-success">Place Order</a>
+                </div>
+            </div>
+    </div>
+</div>

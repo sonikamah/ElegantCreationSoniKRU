@@ -51,15 +51,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="app/controllers/footer-controller.js"></script>
 	<script src="app/controllers/content-controller.js"></script>
 	<script src="app/controllers/signin-controller.js"></script>
-	<script src="app/controllers/cart-checkout-controller.js"></script>
+	<script src="app/controllers/shopping-cart-controller.js"></script>
 	<script src="app/controllers/products-controller.js"></script>
+	<script src="app/controllers/cart-checkout-controller.js"></script>
 
 	<!--  Services  -->
 	<script src="app/services/signin-login-service.js"></script>
 	<script src="app/services/products-service.js"></script>
 	
 	
-
+	<!--Stripe payments-->
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+ 
+	<script type="text/javascript">
+	Stripe.setPublishableKey('pk_test_yMF9rXgMiPf9MJaArKSHQLLt');
+	</script>
+	
+	<script src="bower_components/angular-payments/lib/angular-payments.js"></script>
 
 	
 

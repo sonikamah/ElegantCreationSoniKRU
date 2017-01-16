@@ -9,14 +9,23 @@ angular.module('appCreation')
             $('.banner').remove();
             $(".header").css("background-image", "none");
             
-            // showing total count of selected cart.
-            if($localStorage.cart){
-                $scope.totalItemsCount = $localStorage.cart.length;
-            } else {
-                $scope.totalItemsCount = 0;
-            }
-            
-            $scope.totalItems = $localStorage.cart;
+            // Stripe Response Handler
+            $scope.stripeCallback = function (code, result) {
+                if (result.error) {
+                    window.alert('it failed! error: ' + result.error.message);
+                } else {
+                    window.alert('success! token: ' + result.id);
+                }
+        
 
-            // $scope.totalPrice = ;
+            // Simple POST request example (passing data) :
+                $http.post('/charge', result)
+                .success(function(data, status, headers, config) {
+                    alert(data);
+                })
+                .error(function(data, status, headers, config) {
+                    alert(data);
+                });
+                
+            };
     }]);

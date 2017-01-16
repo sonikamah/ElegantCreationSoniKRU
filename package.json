@@ -9,6 +9,7 @@
   "dependencies": {
     "angular": "^1.5.9",
     "angular-animate": "^1.6.0",
+    "angular-payments": "^1.0.7",
     "angular-ui-router": "^0.3.2",
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",

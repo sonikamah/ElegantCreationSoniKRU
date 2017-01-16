@@ -5,11 +5,19 @@ angular.module('appCreation')
         '$localStorage',
 function($scope, $localStorage) {
     console.log("********** header controller ***********");
-
+    $scope.totalItemsCount = 0;
+    
     // showing total count of selected cart.
-    if($localStorage.cart){
-        $scope.totalItemsCount = $localStorage.cart.length;
-    } else {
-        $scope.totalItemsCount = 0;
-    }
+    $scope.$watch(function () { 
+        return $localStorage.cart.length; },
+        function(newVal,oldVal){
+            $scope.totalItemsCount = newVal || 0; 
+    });
+
+    // if($localStorage.cart){
+    //     $scope.totalItemsCount = $localStorage.cart.length;
+    // } else {
+    //     $scope.totalItemsCount = 0;
+    // }
+
 }]);

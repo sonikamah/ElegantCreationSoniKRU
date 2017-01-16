@@ -25,6 +25,9 @@ angular.module('appCreation')
 
                 if(existingCart) {
                     for (var prod in existingCart) {
+                        if(prod === "compare") {
+                            break;
+                        }
                         storedItemID = existingCart[prod].product.productId;
                         if(storedItemID === product.productId) {
                             existingCart[prod].qty ++;
@@ -33,7 +36,7 @@ angular.module('appCreation')
                         }
                     }
                     // if the cart is not stored one , then add it to localStorage cart .
-                   $localStorage.cart.push({ product: product , qty: 0 , price: 0 });            
+                   $localStorage.cart.push({ product: product , qty: 1 , price: product.price });            
                 } else { 
                     // first entry in the cart
                     $localStorage.cart = [];

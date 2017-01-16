@@ -2861,12 +2861,11 @@ li.selector {
 	margin:8em 0 13em 0;
 }
 h3.c-head{
-	font-size:2em;
+	font-size:1.5em;
 	text-transform:uppercase;
 	color: #303030;
-	font-weight:600;
+	font-weight:400;
 	margin:0.8em 0 0.5em 0;
-	
 }
 .sing-c p a{
 	color:#fb4d01;
